@@ -105,4 +105,37 @@ header .backbutton {
 footer {
     margin-top: 10px;
     text-align: center;
+  
+}
+
+.edit{
+    position: absolute;
+    bottom: 0; 
+    right: 0;
+}
+
+.edit a:not(:first-child) {
+    margin-left: 20px;
+}
+
+
+
+.submit-button {
+    background-color: #383838;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #265b28;
+}
+
+.styled-input {
+    font-size: 2rem; /* Set the font size to match h1 */
+    text-align: center;
+   
 }
