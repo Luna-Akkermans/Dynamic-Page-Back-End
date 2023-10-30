@@ -19,5 +19,17 @@ function getAllCharachters(){
     return $qry->fetchAll(PDO::FETCH_ASSOC);
 }
 
-
+function getSpecificCharacter($id) {
+    global $conn;
+    $sql = "SELECT * FROM characters WHERE id = :id";
+    $qry = $conn->prepare($sql);
+    $qry->execute(array(':id' => $id));
+    $result = $qry->fetch(PDO::FETCH_ASSOC);
+    if (empty($result)) {
+        return false; // No character found
+    } else {
+        return $result; // Character found and returned as an array
+    }
+    
+}
 ?>

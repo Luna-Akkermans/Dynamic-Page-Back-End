@@ -8,8 +8,6 @@
     $charachters = getAllCharachters();
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +23,7 @@
 <div id="container">
     <!-- Loop throgh array given back -->
     <?php foreach($charachters as $charachter){   ?>                            
-    <a class="item" href="pages/characters.php?id=<?=$charachter['id'] ?>">
+    <a class="item" href="pages/character.php?id=<?=$charachter['id'] ?>">
         <div class="left">
             <img class="avatar" src="assets/images/<?=$charachter['avatar']?>">
         </div>
