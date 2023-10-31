@@ -2,12 +2,9 @@
 //Require DB connection
 require '../includes/db.php';
 //Include queries / other datbase functions
-include '../includes/queries.php';
-include '../includes/edit.php';
 include '../includes/add.php';
 //Include functions
 include '../includes/functionality.php';
-//Get data.
 
 ?>
 
@@ -16,7 +13,7 @@ include '../includes/functionality.php';
 
 <head>
     <meta charset="UTF-8">
-    <title>Character - Bowser</title>
+    <title>Toevoegen nieuw chrachter</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="../assets/css/style.css" rel="stylesheet" />

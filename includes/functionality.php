@@ -6,7 +6,6 @@
             echo 'There was an error';
             return false;
         }
-       
     }
 
 ?>

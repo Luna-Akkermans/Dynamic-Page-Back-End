@@ -14,7 +14,7 @@ $char_data = getSpecificCharacter($_GET['id']);
 
 <head>
     <meta charset="UTF-8">
-    <title>Character - Bowser</title>
+    <title>Character - <?=$char_data['name'] ?></title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="../assets/css/style.css" rel="stylesheet" />
@@ -63,10 +63,7 @@ $char_data = getSpecificCharacter($_GET['id']);
                         <?= $char_data['bio']?>
                     </p>
                     <div class="edit">
-                        <!-- Link to the edit page of the current character -->
                         <a href="character_edit.php?id=<?= $char_data['id']?>"><i class="fas fa-edit"></i>Bewerk</a>
-                        <!-- Add delete functionality later -->
-                        
                         <a onclick="confirmDelete(<?= $char_data['id']?>)"><i class="fas fa-trash"></i> Verwijder</a>
                     </div>
                 </div>
@@ -81,8 +78,6 @@ $char_data = getSpecificCharacter($_GET['id']);
     </div>
     <footer>
         &copy; Luna Mila Akkermans 2023</footer>
-
-
         <script src="../assets/script/main.js"></script>
 </body>
 
