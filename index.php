@@ -21,7 +21,7 @@
 
 </header>
 <div id="container">
-    <!-- Loop throgh array given back -->
+    <!-- Loop throgh array given back charachters -->
     <?php foreach($charachters as $charachter){   ?>                            
     <a class="item" href="pages/character.php?id=<?=$charachter['id'] ?>">
         <div class="left">
@@ -42,6 +42,8 @@
     <?php }?>
 </div>
 
-<footer>&copy; Luna Mila Akkermans 2023</footer>
+<footer>
+        <a href="pages/charachter_add.php">Staat jou character er niet tussen? voeg hem dan hier toe! <i class="fas fa-user-plus"></i></a> 
+       <span> &copy; Luna Mila Akkermans 2023</span></footer>
 </body>
 </html>

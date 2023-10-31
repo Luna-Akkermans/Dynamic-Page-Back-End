@@ -66,7 +66,8 @@ $char_data = getSpecificCharacter($_GET['id']);
                         <!-- Link to the edit page of the current character -->
                         <a href="character_edit.php?id=<?= $char_data['id']?>"><i class="fas fa-edit"></i>Bewerk</a>
                         <!-- Add delete functionality later -->
-                        <a href=""><i class="fas fa-trash"></i> Verwijder</a>
+                        
+                        <a onclick="confirmDelete(<?= $char_data['id']?>)"><i class="fas fa-trash"></i> Verwijder</a>
                     </div>
                 </div>
                 <div style="clear: both"></div>
@@ -74,11 +75,15 @@ $char_data = getSpecificCharacter($_GET['id']);
         <?php else: ?>
             <div class="detail">
                 <p>Error: Character not found, </p>
-                <a href=""> <i class="fas fa-user-plus"></i> Add Charachter</a>
+                <a href="charachter_add.php"> <i class="fas fa-user-plus"></i> Add Charachter</a>
             </div>
         <?php endif; ?>
     </div>
-    <footer>&copy; Luna Mila Akkermans 2023</footer>
+    <footer>
+        &copy; Luna Mila Akkermans 2023</footer>
+
+
+        <script src="../assets/script/main.js"></script>
 </body>
 
 

@@ -1,26 +1,19 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $health = $_POST['health'];
-    $attack = $_POST['attack'];
-    $defense = $_POST['defense'];
-    $weapon = $_POST['weapon'];
-    $armor = $_POST['armor'];
-    $bio = $_POST['bio'];
-
-
     try {
         global $conn;
         $sql = "UPDATE characters 
-                SET health = :health, attack = :attack, defense = :defense, weapon = :weapon, armor = :armor, bio = :bio 
-                WHERE id = :char_id";
+        SET Name = :name, health = :health, attack = :attack, defense = :defense, weapon = :weapon, armor = :armor, bio = :bio 
+        WHERE id = :char_id";
         $stmt = $conn->prepare($sql);
         $params = array(
-            ':health' => $health,
-            ':attack' => $attack,
-            ':defense' => $defense,
-            ':weapon' => $weapon,
-            ':armor' => $armor,
-            ':bio' => $bio,
+            ':name' => $_POST['name'],
+            ':health' => $health = $_POST['health'],
+            ':attack' => $attack = $_POST['attack'],
+            ':defense' =>    $defense = $_POST['defense'],
+            ':weapon' => $_POST['weapon'],
+            ':armor' => $_POST['armor'],
+            ':bio' => $_POST['bio'],
             ':char_id' => $_GET['id']
         );
         $stmt->execute($params);
